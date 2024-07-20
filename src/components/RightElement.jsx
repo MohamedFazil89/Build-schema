@@ -16,6 +16,9 @@ export default function Right(props) {
         }
     };
 
+    const handleRemoveSegment = (indexToRemove) => {
+        setValue(value.filter((_, index) => index !== indexToRemove));
+    };
     return (
         <div className="Right-elements" style={{ width: `${props.widths}%` }}>
             <NavBar Title="Save Segment" />
@@ -25,7 +28,18 @@ export default function Right(props) {
                 <p>To save your segment, you need to add the schemas to build the query</p>
                 <ul>
                     {value.map((item, index) => (
-                        <li className="Datas" key={index}>{item}</li>
+                        <div className="loop-view">
+                            <select className="Datas" key={index}>
+                            <option value={item}>{item}</option>
+                            <option value={item}>{item}</option>
+                            <option value={item}>{item}</option>
+
+                            </select>
+                            <svg onClick={() => handleRemoveSegment(index) } xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z" /></svg>
+
+                            </div>
+                            
+                            
                     ))}
                 </ul>
                 <section className="option-container">
