@@ -1,0 +1,33 @@
+.Right-elements{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 0;
+    transition: all .5s;
+
+}
+.Right-content{
+    margin: 20px;
+}
+
+.Right-content > *{
+    margin: 5px;
+}
+
+.Right-content > h2{
+    font-style: normal;
+    /* background: linear-gradient(white, black, pink, blue, red); */
+    /* background-clip: text; */
+    /* color: transparent; */
+
+}
+
+.Right-content > input{
+    width: 50%;
+    padding: 10px;
+}
+
+.Right-content > p{
+    font-size:15px;
+    width: 60%;
+}
