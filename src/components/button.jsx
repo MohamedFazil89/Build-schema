@@ -11,8 +11,7 @@ export default function Button(props){
         </div>
 
            <div className="button-container">
-           <button onClick={props.handelClick}>Save Segment</button>
- 
+           <button onClick={props.handelClick}>Save Segment</button> 
 
            </div>
         </div>

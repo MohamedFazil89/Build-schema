@@ -1,10 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .Right-elements{
     display: flex;
     flex-direction: column;
     background-color: white;
     width: 0;
-    transition: all .5s;
+    transition: all .7s;
+}
+.Save-div{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    gap: 15px;
 
+}
+
+.option-container{
+    display: flex;
+    padding: 0;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.option-container > svg{
+    /* width: 100%; */
+    cursor: pointer;
+}
+
+
+.option-container > #Add{
+    padding: 0px 85px;
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+
+}
+
+
+.Save-div > button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(5, 194, 74);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.Save-div > button:nth-child(2){
+    background-color: gray;
+    font-weight: bold;
+    
 }
 .Right-content{
     margin: 20px;
@@ -12,6 +63,7 @@
 
 .Right-content > *{
     margin: 5px;
+    text-align: left;
 }
 
 .Right-content > h2{
@@ -19,7 +71,6 @@
     /* background: linear-gradient(white, black, pink, blue, red); */
     /* background-clip: text; */
     /* color: transparent; */
-
 }
 
 .Right-content > input{
@@ -30,4 +81,9 @@
 .Right-content > p{
     font-size:15px;
     width: 60%;
+}
+
+.Datas{
+    list-style-type: none;
+    font-size: 25px;
 }

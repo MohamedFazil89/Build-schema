@@ -8,8 +8,11 @@ function App() {
 
   return (
     <div className="App">
+      
       <Button handelClick={() => {width === 0 ? setWidth(100) : setWidth(0)}}/>
       <Right widths={width}/>
+
+      
     </div>
   );
 }
