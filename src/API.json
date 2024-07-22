@@ -1,0 +1,54 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "segment_name": "Name of the segment",
+      "schema": [
+        {
+          "first_name": "Value"
+        },
+        {
+          "Last_name": "Value"
+        }
+      ]
+    },
+    {
+      "id": "16a9",
+      "segment_name": "",
+      "schema": [
+        {}
+      ]
+    },
+    {
+      "id": "6d4d",
+      "segment_name": "Fazil",
+      "schema": [
+        "Last Name"
+      ]
+    },
+    {
+      "id": "7fba",
+      "segment_name": "Fazil",
+      "schema": [
+        "Last Name"
+      ]
+    },
+    {
+      "id": "0cee",
+      "segment_name": "Fazil",
+      "schema": [
+        "Last Name",
+        "Age"
+      ]
+    },
+    {
+      "id": "f7dc",
+      "segment_name": "Fazil",
+      "schema": [
+        "Last Name",
+        "Age",
+        "Account Name"
+      ]
+    }
+  ]
+}

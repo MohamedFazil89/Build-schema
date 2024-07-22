@@ -1,38 +1,62 @@
 import React, { useState } from "react";
 import "./styles/right.css";
 import NavBar from "./NavBar";
+import axios from "axios";
 
 export default function Right(props) {
     const [value, setValue] = useState([]);
     const [segmentName, setSegmentName] = useState(""); 
     const [selectedValue, setSelectedValue] = useState("");
+    // post data formate
+    const [PostData, setPostData] = useState({
+        segment_name:"",
+        schema: [{...value}]
+    })
 
     const handleSelectChange = (e) => {
         setSelectedValue(e.target.value);
     };
 
     const handleAddSegment = (e) => {
-        e.preventDefault();
-        if (selectedValue && selectedValue !== "Add-schema") {
+        if (selectedValue && selectedValue !== "Add-schema"&& segmentName !== "") {
             setValue([...value, selectedValue]);
         }
     };
+
 
     const handleRemoveSegment = (indexToRemove) => {
         setValue(value.filter((_, index) => index !== indexToRemove));
     };
 
+    // API post section
+
+    const  handleSubmit = async (e) =>{
+        e.preventDefault();
+        setPostData({segment_name:segmentName, schema:value});
+        // console.log(PostData);
+        try{
+        const response = await axios.post("http://localhost:3000/post", PostData);
+        console.log(response.data);
+        }catch(err){
+            console.log("err");
+        }
+        
+    }
+
+
+
     return (
         <div className="right-elements" style={{ width: `${props.widths}%` }}>
             <NavBar Title="Save Segment" />
-            <div className="right-content">
+            <form className="right-content" onSubmit={handleSubmit}>
                 <h2>Enter the Name of the Segment</h2>
                 <input 
                     type="text" 
                     placeholder="Name of the Segment" 
                     name="segment" 
                     value={segmentName} 
-                    onChange={(e) => setSegmentName(e.target.value)} 
+                    onChange={(e) => setSegmentName(e.target.value)}
+                    required 
                 />
                 <p>To save your segment, you need to add the schemas to build the query</p>
                 <ul>
@@ -66,7 +90,7 @@ export default function Right(props) {
                     <button>Save the Segment</button>
                     <button>Cancel</button>
                 </div>
-            </div>
+            </form>
         </div>
     );
 }
