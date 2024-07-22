@@ -1,49 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.Right-elements{
+.right-elements {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 0;
-    transition: all .7s;
+    transition: all 0.7s;
 }
-.Save-div{
+
+.save-div {
     display: flex;
     position: absolute;
     bottom: 20px;
     gap: 15px;
-
 }
 
-.option-container{
-    display: flex;
+.option-container {
     padding: 0;
-    /* flex-direction: column; */
-    justify-content: flex-start;
-    cursor: pointer;
-}
-svg{
-    /* width: 100%; */
     cursor: pointer;
 }
 
+svg {
+    cursor: pointer;
+}
 
-.option-container > #Add{
-    padding: 0px 85px;
-    margin: 0;
+.add-segment {
+    background-color: transparent;
+    color: blue;
+    border: none;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.option-container > #Add {
+    padding: 0 85px;
     text-align: left;
     font-size: 1rem;
     display: flex;
     justify-content: flex-start;
     cursor: pointer;
-
 }
 
-
-.Save-div > button{
+.save-div > button {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -52,49 +52,50 @@ svg{
     font-size: 1rem;
     cursor: pointer;
 }
-.Save-div > button:nth-child(2){
+
+.save-div > button:nth-child(2) {
     background-color: gray;
     font-weight: bold;
-    
 }
-.Right-content{
+
+.right-content {
     margin: 20px;
 }
 
-.Right-content > *{
+.right-content > * {
     margin: 5px;
     text-align: left;
 }
 
-.Right-content > h2{
+.right-content > h2 {
     font-style: normal;
-    /* background: linear-gradient(white, black, pink, blue, red); */
-    /* background-clip: text; */
-    /* color: transparent; */
 }
 
-.Right-content > input{
+.right-content > input {
     width: 50%;
-    padding: 10px;
 }
 
-.Right-content > p{
-    font-size:15px;
+.right-content > p {
+    font-size: 15px;
     width: 60%;
 }
 
-.Datas{
+.datas {
     list-style-type: none;
-    font-size: 15px;
-    display: flex;
-    /* flex-direction: column; */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 85px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.loop-view{
+.loop-view {
     display: flex;
-    margin: 10px;
+}
+
+#Add {
+    margin: 5px;
+}
+
+select {
+    padding: 0 105px;
+    text-align: end;
 }
